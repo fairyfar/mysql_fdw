@@ -2122,7 +2122,7 @@ mysql_deparse_from_expr_for_rel(StringInfo buf, PlannerInfo *root,
 		 * join.
 		 */
 		if (use_alias)
-			appendStringInfo(buf, " %s%d", REL_ALIAS_PREFIX,
+			appendStringInfo(buf, " %s%u", REL_ALIAS_PREFIX,
 							 foreignrel->relid);
 
 		table_close(rel, NoLock);
